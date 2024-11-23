@@ -1,3 +1,4 @@
 packages:
-  - local: ../dbt-atproto
-sha1_hash: 58e17e19105d31a2af7354af75aa2552c992d276
+  - git: https://github.com/geoHeil/dbt-atproto.git
+    revision: 4fdb05aabfef30279b36cbe6b6a838d5f5e5bd9f
+sha1_hash: 1382270f88d54e2f4088c2fba4475191e1a9923d
