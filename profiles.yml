@@ -1,0 +1,10 @@
+flags:
+  send_anonymous_usage_stats: False
+
+dbt_atproto_example:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ./bsky_analytics.duckdb
+      threads: 2

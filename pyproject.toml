@@ -16,13 +16,12 @@ requires = ["hatchling"]
 [tool.pixi.environments]
 prod = { features = ["main"], solve-group = "atproto-example" }
 [tool.pixi.feature.main.dependencies]
-[tool.pixi.feature.main.pypi-dependencies]
 duckdb = ">=1.1.1,<2"
+[tool.pixi.feature.main.pypi-dependencies]
 dbt-core = ">=1.8.0,<1.10"
+dbt-duckdb = ">=1.8.0,<1.10"
 dbt-atproto = { path = "../dbt-atproto", editable = true }
 
 [tool.pixi.tasks]
-
-[tool.pixi.tasks.run]
-cmd = "dbt run"
-description = "dbt run"
+deps = { cmd = "dbt deps", cwd = "dbt_atproto_example" }
+run = { cmd = "dbt run", cwd = "dbt_atproto_example", depends-on = ["deps"] }

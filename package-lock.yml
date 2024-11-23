@@ -1,0 +1,3 @@
+packages:
+  - local: ../dbt-atproto
+sha1_hash: 58e17e19105d31a2af7354af75aa2552c992d276

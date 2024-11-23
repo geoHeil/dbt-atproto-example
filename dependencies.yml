@@ -1,0 +1,5 @@
+packages:
+  #- git: "https://github.com/geoHeil/dbt-atproto.git"
+  #  revision: 1.0.0
+
+  - local: ../dbt-atproto
