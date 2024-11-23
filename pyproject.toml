@@ -23,5 +23,8 @@ dbt-duckdb = ">=1.8.0,<1.10"
 dbt-atproto = { path = "../dbt-atproto", editable = true }
 
 [tool.pixi.tasks]
-deps = { cmd = "dbt deps", cwd = "dbt_atproto_example" }
-run = { cmd = "dbt run", cwd = "dbt_atproto_example", depends-on = ["deps"] }
+deps = { cmd = "dbt deps" }
+run = { cmd = "dbt run", depends-on = ["deps"] }
+
+shell = { cmd = "duckdb -readonly bsky_analytics.duckdb" , depends-on = ["run"] }
+shell-direct = { cmd = "duckdb -readonly bsky_analytics.duckdb" , depends-on = ["deps"] }

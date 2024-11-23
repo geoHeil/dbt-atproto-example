@@ -7,4 +7,8 @@ dbt_atproto_example:
     dev:
       type: duckdb
       path: ./bsky_analytics.duckdb
-      threads: 2
+      threads: 4
+      attach:
+        - path: "https://hive.buz.dev/bluesky/catalog"
+          alias: bsky
+
