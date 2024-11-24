@@ -13,6 +13,10 @@ Run the example commands and attach the remote duckdb instance with the data fro
 ```bash
 pixi run shell
 ```
+in a 2nd shell
+```bash
+duckdb -c "$(curl -s https://skyfirehose.com/bootstrap.sql)" 
+```
 
 Then inside the duckdb shell:
 
@@ -22,4 +26,13 @@ SELECT * FROM jetstream_sample;
 
 ATTACH 'https://hive.buz.dev/bluesky/catalog' AS bsky;
 SELECT * FROM bsky.jetstream LIMIT 5;
+DESCRIBE bsky.jetstream;
+
+
+-- paste the secret now from the 2nd terminal
+ATTACH 'https://skyfirehose.com/database' AS bluesky; 
+SELECT * FROM bluesky.schema;
+
+SELECT count(*) FROM bluesky.likes WHERE event_dt = '2024-11-18' and event_hour = '12';
+select * from bluesky.jetstream limit 10;
 ```
