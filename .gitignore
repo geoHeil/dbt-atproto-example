@@ -200,3 +200,4 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/dbt,visualstudiocode,python
 .user.yml
 bsky_analytics.duckdb
+dbt-atproto.code-workspace
