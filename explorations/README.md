@@ -26,5 +26,6 @@ select * from messages limit 5;
 
 ## links and references
 
+- https://motherduck.com/blog/how-to-extract-analytics-from-bluesky/
 - https://github.com/metrico/quackpipe
 - https://github.com/datonic/datadex/commit/a4bc2443e727ca74aa8902b1111fb6e33e5193ae#diff-d20bdb69b83b08498f8ebf2ea19805eea2622c2f490c3c6fb7ddb6b6df6d3a54R8
